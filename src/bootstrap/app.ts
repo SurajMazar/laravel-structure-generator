@@ -1,3 +1,4 @@
+import { generateStructure } from "../commands/generate";
 import { flags } from "../constants/flags";
 import UserInfoService from "../services/userInfo.service";
 import {
@@ -15,6 +16,7 @@ class App {
         const userInfo = new UserInfoService();
         await userInfo.init(); // DATA COLLECTION
 
+        generateStructure(userInfo)
         process.exit(1);
       }
     } else {

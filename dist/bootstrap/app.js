@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const generate_1 = require("../commands/generate");
 const flags_1 = require("../constants/flags");
 const userInfo_service_1 = __importDefault(require("../services/userInfo.service"));
 const helper_util_1 = require("../utils/helper.util");
@@ -24,6 +25,7 @@ class App {
                     /** SERVICE TO GATHER USER INFORMATION*/
                     const userInfo = new userInfo_service_1.default();
                     yield userInfo.init(); // DATA COLLECTION
+                    (0, generate_1.generateStructure)(userInfo);
                     process.exit(1);
                 }
             }

@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.generateStructure = void 0;
 const structure_service_1 = __importDefault(require("../services/structure.service"));
 const string_util_1 = require("../utils/string.util");
 const generateStructure = (userInfo) => {
@@ -15,3 +16,4 @@ const generateStructure = (userInfo) => {
     structureService.generateResource(userInfo.resource_path, userInfo.resource_name, userInfo.RequestValidations);
     structureService.generateController(userInfo.controller_path, userInfo.controller_name, userInfo.model_path, userInfo.model_name, userInfo.model_name.toLowerCase(), userInfo.request_path, userInfo.create_request_name, userInfo.update_request_name, userInfo.service_path, userInfo.service_name, (0, string_util_1.FirstCharcterToLower)(userInfo.service_name), userInfo.resource_path, userInfo.resource_name);
 };
+exports.generateStructure = generateStructure;

@@ -2,7 +2,7 @@ import StructureService from "../services/structure.service";
 import UserInfoService from "../services/userInfo.service";
 import { FirstCharcterToLower } from "../utils/string.util";
 
-const generateStructure = (userInfo: UserInfoService) => {
+export const generateStructure = (userInfo: UserInfoService) => {
   const structureService = new StructureService();
 
   structureService.generateBuilder(
