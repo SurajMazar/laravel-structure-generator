@@ -1,0 +1,31 @@
+{
+  "name": "laravel-structure-generator",
+  "version": "1.0.0",
+  "description": "Generate crud structures for laravel",
+  "main": "dist/bin/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SurajMazar/laravel-structure-generator.git"
+  },
+  "author": "Suraj Thapa <suraj.mazar@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "typescript": "^4.9.4"
+  },
+  "bin": {
+    "_laravel": "dist/bin/index.js"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.11.18",
+    "prettier": "^2.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/SurajMazar/laravel-structure-generator/issues"
+  },
+  "homepage": "https://github.com/SurajMazar/laravel-structure-generator#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
