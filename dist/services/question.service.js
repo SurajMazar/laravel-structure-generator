@@ -30,7 +30,7 @@ const textQuestion = (question, defaultValue) => __awaiter(void 0, void 0, void 
             default: defaultValue,
         },
     ]);
-    return answer.question || defaultValue;
+    return (0, string_util_1.sanitize)(answer.question) || defaultValue;
 });
 exports.textQuestion = textQuestion;
 /**

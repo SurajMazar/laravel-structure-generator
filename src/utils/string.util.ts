@@ -10,3 +10,8 @@ export const FirstCharcterToUpper = (string: string) => {
 export const FirstCharcterToLower = (string: string) => {
   return string.charAt(0).toLowerCase() + string.substring(1);
 };
+
+
+export const sanitize = (string:string) => {
+return string.replace(String.fromCharCode(92), "\\").trim();
+}

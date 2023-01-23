@@ -46,7 +46,7 @@ class %service_class% {
      */
     public function destroy(%model_class% $model) : bool|int
     {
-        return $model->delete($data);
+        return $model->delete();
     }
 }
 `;

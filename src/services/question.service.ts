@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
 import { exitWithErrorMessage } from "../utils/logger.util";
-import { FirstCharcterToUpper } from "../utils/string.util";
+import { FirstCharcterToUpper, sanitize } from "../utils/string.util";
 
 /**
  * GET TEXT ANSWER FROM USER
@@ -19,7 +19,7 @@ export const textQuestion = async (
       default: defaultValue,
     },
   ]);
-  return answer.question || defaultValue;
+  return sanitize(answer.question) || defaultValue;
 };
 
 /**
